@@ -1,0 +1,14 @@
+after commit:
+	selenium
+	TestSwarm
+
+JSTestDriver requires js test files, requires tests to be executed with their test framework
+
+YUI Test, want to use our existing tests
+Yeti works with unmodified YUI Test_based tests
+Unit tests or Functional tests are all fine.
+
+Yeti is a test launcher, it only launches tests and reports results.
+
+
+Selenium is complicated and doesn't work with mobile devices.

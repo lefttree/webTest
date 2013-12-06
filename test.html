@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<script src="http://yui.yahooapis.com/3.11.0/build/yui/yui-min.js"></script>
+
+<script>
+
+    function sortArray(array) {
+    if (array instanceof Array){
+        array.sort();
+    } else {
+        throw new TypeError("Expected an array");
+    }
+}
+
+// Create a new YUI instance and populate it with the required modules.
+YUI().use('test', function (Y) {
+    // Test is available and ready for use. Add implementation
+    // code here.
+
+
+var testCase = new Y.Test.Case({
+
+    name: "TestCase Name",
+
+    //---------------------------------------------
+    // Special instructions
+    //---------------------------------------------
+
+    _should: {
+        error: {
+            testSortArray: true //this test should throw an error
+        }
+    },
+
+    //---------------------------------------------
+    // Tests
+    //---------------------------------------------
+
+    testSortArray: function () {
+        sortArray(12);  //this should throw an error
+    }
+
+});
+});
+</script>
+
+<html>
+	<body>
+		<p>it works!</p>
+	</body>
+</html>

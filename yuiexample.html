@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--CSS-->
+<link rel="stylesheet" type="text/css"
+href="http://yui.yahooapis.com/2.6.0/build/logger/assets/logger.css
+<link rel="stylesheet" type="text/css"
+href="http://yui.yahooapis.com/2.6.0/build/yuitest/assets/testlogger.css">
+
+<!-- Combo-handled YUI JS files: -->
+<script type="text/javascript" src="http://yui.yahooapis.com/combo?2.6.0/build/yahoo-dom-event/yahoo-dom-event.js&2.6.0/build/logger/logger-min.js&2.6.0/build/yuitest/yuitest-min.js"></script>
+
+<script type="text/javascript" src="index.js"></script>
+
+<script>
+var testCase = new YAHOO.tool.TestCase({
+    name: "trim() Tests",
+
+    testTrimWithLeadingWhiteSpace: function(){
+        var result = trim("    Hello world!");
+        YAHOO.util.Assert.areEqual("Hello world!", result);
+    }
+});
+
+window.onload = function(){
+
+    //create the logger
+    var logger = new YAHOO.tool.TestLogger("testLogger");
+
+    //run the tests
+    YAHOO.tool.TestRunner.run();
+};
+
+</script>
+
+<html>
+	<body>
+		<p>it works!</p>
+	</body>
+</html>
